@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SlideImageView" customModule="CustomerView" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="gAW-jK-SZX" id="T5n-x6-EJ9"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Zzd-SY-lsX"/>
+                <outlet property="currentPageLabel" destination="bfh-Dy-Xro" id="6L5-Eg-Hin"/>
+                <outlet property="pageControl" destination="zDb-2i-S41" id="9Bn-zr-ZXj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="186"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-jK-SZX">
+                    <rect key="frame" x="0.0" y="0.0" width="427" height="186"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JOM-qZ-XhD">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="czb-xd-PNh"/>
+                        <outlet property="delegate" destination="-1" id="QdD-e3-707"/>
+                    </connections>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfh-Dy-Xro">
+                    <rect key="frame" x="367" y="146" width="40" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="hdC-As-KgY"/>
+                        <constraint firstAttribute="height" constant="20" id="qQ7-Jk-3jK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-2i-S41">
+                    <rect key="frame" x="60" y="138" width="307" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gAW-jK-SZX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="3NR-xV-8EB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bfh-Dy-Xro" secondAttribute="bottom" constant="20" id="9ev-DC-mTE"/>
+                <constraint firstItem="gAW-jK-SZX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GZ7-Mj-mhZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zDb-2i-S41" secondAttribute="bottom" constant="11" id="LWM-Fl-22g"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zDb-2i-S41" secondAttribute="trailing" constant="60" id="W4M-2m-Tj8"/>
+                <constraint firstItem="gAW-jK-SZX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Wd4-Fs-lGw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bfh-Dy-Xro" secondAttribute="trailing" constant="20" id="XWi-R9-32Y"/>
+                <constraint firstItem="gAW-jK-SZX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="iQ6-WJ-BmN"/>
+                <constraint firstItem="zDb-2i-S41" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="60" id="t6l-Hn-hBq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="180" y="-63.868065967016499"/>
+        </view>
+    </objects>
+</document>
